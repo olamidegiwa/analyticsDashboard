@@ -72,7 +72,7 @@ const LastOrder = () => {
               className=" text-gray-400 text-base dark:text-white items-center"
             >
               <th>Name</th>
-              <th>Date</th>
+              <th className="hidden md:flex">Date</th>
               <th>Amount</th>
               <th className="hidden md:flex">Status</th>
               <th className="hidden md:flex">Invoice</th>
@@ -93,7 +93,7 @@ const LastOrder = () => {
                 </td>
                 <td
                   data-aos="fade-up-left"
-                  className=" text-gray-500 dark:text-white text-base"
+                  className=" text-gray-500 dark:text-white text-base hidden md:flex"
                 >
                   {data.date}
                 </td>
@@ -103,7 +103,10 @@ const LastOrder = () => {
                 >
                   {data.amount}
                 </td>
-                <td data-aos="fade-down-left" className="text-base hidden md:flex">
+                <td
+                  data-aos="fade-down-left"
+                  className="text-base hidden md:flex"
+                >
                   {data.status}
                 </td>
 
