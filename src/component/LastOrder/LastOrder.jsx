@@ -110,7 +110,9 @@ const LastOrder = () => {
       </div>
 
       <div className=" border-2 rounded-xl p-3 topplatform dark:bg-black mb-4 px-3 ">
-        <div data-aos="zoom-out" className="flex justify-between mb-2 ">
+        <div
+        //  data-aos="zoom-out"
+          className="flex justify-between mb-2 ">
           <p className="fs-4 fw-semibold text-gray-900 dark:text-pink-500 ">
             Top Platform
           </p>
@@ -119,19 +121,19 @@ const LastOrder = () => {
 
         <div className="flex flex-col gap-2 py-2  ">
           <p
-            data-aos="zoom-in"
+            // data-aos="zoom-in"
             className="text-gray-900 fs-4 fw-semibold dark:text-white"
           >
             Book Bazaar
           </p>
           <div
-            data-aos="zoom-in"
+            // data-aos="zoom-in"
             className="w-100 h-[16px] rounded-full bg-gray-300 dark:bg-white"
           >
             <div className="w-50 h-[16px] bg-blue-700 rounded-full"></div>
           </div>
           <div
-            data-aos="zoom-in"
+            // data-aos="zoom-in"
             className="flex items-center justify-between fs-4 text-gray-400 dark:text-white"
           >
             <p>$2,500,000</p>
@@ -141,19 +143,19 @@ const LastOrder = () => {
 
         <div className="flex flex-col gap-2 py-2">
           <p
-            data-aos="zoom-in"
+            // data-aos="zoom-in"
             className="text-gray-900 fs-4 fw-semibold dark:text-white"
           >
             Artisan Aisle
           </p>
           <div
-            data-aos="zoom-in"
+            // data-aos="zoom-in"
             className="w-100 h-[16px] rounded-full bg-gray-300 dark:bg-white"
           >
             <div className="h-[16px] bg-blue-400 rounded-full Aisle"></div>
           </div>
           <div
-            data-aos="zoom-in"
+            // data-aos="zoom-in"
             className="flex items-center justify-between fs-4 text-gray-400 dark:text-white"
           >
             <p>$1,800,000</p>
@@ -162,19 +164,19 @@ const LastOrder = () => {
         </div>
         <div className="flex flex-col gap-2 py-2">
           <p
-            data-aos="zoom-in"
+            // data-aos="zoom-in"
             className="text-gray-900 fs-4 fw-semibold dark:text-white"
           >
             Toy Troop
           </p>
           <div
-            data-aos="zoom-in"
+            // data-aos="zoom-in"
             className="w-100 h-[16px] rounded-full bg-gray-300 dark:bg-white"
           >
             <div className="h-[16px] Troop bg-yellow-500 rounded-full"></div>
           </div>
           <div
-            data-aos="zoom-in"
+            // data-aos="zoom-in"
             className="flex items-center justify-between fs-4 text-gray-400 dark:text-white"
           >
             <p>$1,200,000</p>
