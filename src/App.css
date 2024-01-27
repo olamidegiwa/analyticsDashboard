@@ -3,7 +3,7 @@
 }
 
 table {
-  width: 100%;
+  width: 90%;
   text-align: start;
 }
 td {
@@ -24,13 +24,14 @@ th {
   max-width: 806px;
 }
 .topplatform {
-  width: 100%;
+  width: 90%;
   max-width: 488px;
 }
 .salestrend {
-  width: 100%;
-  max-width: 700px;
+  width: 95%;
+  max-width: 750px;
 }
 .userdata {
-  width: 100%;
+  width: 90%;
+  max-width: 700px;
 }

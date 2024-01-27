@@ -15,7 +15,7 @@ function App() {
   }, []);
   return (
     <div className="dark:bg-black dark:text-white">
-      <RootLayout  />
+      <RootLayout />
     </div>
   );
 }
