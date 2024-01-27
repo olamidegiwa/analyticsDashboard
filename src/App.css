@@ -1,6 +1,8 @@
 #root {
   background-color: #fafafa;
   min-height: 100vh;
+  overflow-x: hidden;
+  width: 100vw;
 }
 * {
   padding: 0;
@@ -9,9 +11,9 @@
 }
 
 table {
-  width: 90%;
+  width: 100%;
   text-align: start;
-
+  align-items: center;
 }
 td {
   border-top: 2px solid #edf2f7;
@@ -19,8 +21,6 @@ td {
 }
 th {
   padding-bottom: 12px;
-  /* text-align: center;
-  justify-content: center; */
 }
 .Aisle {
   width: 35%;

@@ -14,10 +14,10 @@ const SideBar = () => {
   return (
     <div className="sidebar d-flex flex-xl-column items-center justify-content-between justify-content-xl-start gap-xl-4 px-2 py-3 mx-md-2  bg-gray-100 rounded-xl dark:bg-black dark:text-white">
       <img
-      //  data-aos="fade-down-right"
+       data-aos="fade-down-right"
         src={icon1} alt="" className="w-10" />
       <div
-        // data-aos="fade-down-left"
+       data-aos="zoom-out-right"
         className=" flex-xl-column hidden lg:flex items-center"
       >
         <img src={icon2} alt="icon" />
@@ -32,7 +32,7 @@ const SideBar = () => {
       </div>
 
       <div
-        // data-aos="fade-up"
+        data-aos="fade-up"
         className=" flex-xl-column  align-items-center hidden xl:flex"
       >
         <img src={icon7} alt="icon" />

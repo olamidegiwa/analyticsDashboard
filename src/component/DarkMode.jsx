@@ -19,7 +19,7 @@ const DarkMode = () => {
   }, [theme]);
   return (
     <div
-      // data-aos="fade-down-left"
+      data-aos="fade-down-left"
       className=" flex flex-xl-column gap-3 py-2 px-2 bg-white rounded-full items-center"
     >
       <IoMdSunny
