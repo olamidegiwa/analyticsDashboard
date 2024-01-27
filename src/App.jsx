@@ -8,10 +8,11 @@ function App() {
   React.useEffect(() => {
     AOS.init({
       offset: 100,
-      duration: 1000,
+      duration: 900,
       easing: "ease-in-sine",
       delay: 100,
     });
+    AOS.refresh();
   }, []);
   return (
     <div className="dark:bg-black dark:text-white">

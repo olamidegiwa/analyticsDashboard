@@ -12,14 +12,14 @@ const Search = () => {
     <div className="py-2 ">
       <div className="container flex justify-between items-center ">
         <h1
-          // data-aos="fade-up"
+          data-aos="fade-up"
           className=" dark:text-pink-500 text-gray-900 fw-semibold text-xl"
         >
           Dashboard
         </h1>
         <div className="flex  items-center gap-2 ">
           <div
-            // data-aos="flip-up"
+            data-aos="flip-up"
             className=" rounded-full border gap-2  w-[350px] dark:text-black text-gray-300 hover:w-[400px] transition-all duration-300 items-center py-2 px-3 bg-white search hidden lg:flex"
           >
             <GoSearch className="text-2xl dark:text-black " />
@@ -31,7 +31,7 @@ const Search = () => {
           </div>
 
           <div
-            // data-aos="flip-down"
+            data-aos="flip-down"
             className=" items-center text-xl text-black dash-calender hidden lg:flex gap-1 "
           >
             <LuCalendarDays className="dark:text-white" />
@@ -45,7 +45,7 @@ const Search = () => {
             </div>
           </div>
           <div
-            // data-aos="fade-up"
+            data-aos="fade-up"
             className="flex items-center rounded-full w-[195px] gap-2 border px-1 py-1 "
           >
             <img src={img1} alt="" className="h-10 w-10 rounded-full" />
