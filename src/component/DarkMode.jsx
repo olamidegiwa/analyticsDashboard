@@ -18,7 +18,10 @@ const DarkMode = () => {
     }
   }, [theme]);
   return (
-    <div className=" flex flex-xl-column gap-3 py-2 px-2 bg-white rounded-full items-center">
+    <div
+      data-aos="fade-down-left"
+      className=" flex flex-xl-column gap-3 py-2 px-2 bg-white rounded-full items-center"
+    >
       <IoMdSunny
         onClick={() => setTheme(theme === "light" ? "light" : "light")}
         className="fs-2  rounded-full bg-success px-1 text-white bg-green-300 cursor-pointer transition-all duration-300"

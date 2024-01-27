@@ -68,14 +68,14 @@ const LastOrder = () => {
         <table>
           <thead>
             <tr
-              // data-aos="zoom-out-right"
+              data-aos="zoom-out-left"
               className=" text-gray-400 text-base dark:text-white"
             >
               <th>Name</th>
               <th>Date</th>
               <th>Amount</th>
               <th>Status</th>
-              <th>Invoice</th>
+              <th className="hidden md:flex">Invoice</th>
             </tr>
           </thead>
 
@@ -84,7 +84,7 @@ const LastOrder = () => {
               <tr key={data.id}>
                 <td>
                   <div
-                    // data-aos="zoom-out-right"
+                    data-aos="zoom-in-down"
                     className="flex flex-col md:flex-row items-center dark:text-white text-gray-600 fw-semibold gap-2 text-base"
                   >
                     <img src={data.img} alt="" />
@@ -92,28 +92,25 @@ const LastOrder = () => {
                   </div>
                 </td>
                 <td
-                  // data-aos="zoom-out-up"
+                  data-aos="zoom-in-up"
                   className=" text-gray-500 dark:text-white text-base"
                 >
                   {data.date}
                 </td>
                 <td
-                  // data-aos="zoom-out-down"
+                  data-aos="zoom-in-up"
                   className=" text-gray-800 fw-semibold text-base dark:text-white"
                 >
                   {data.amount}
                 </td>
-                <td
-                  //  data-aos="zoom-out-left"
-                  className="text-base"
-                >
+                <td data-aos="zoom-in-down" className="text-base">
                   {data.status}
                 </td>
 
                 <td className=" text-gray-600 text-base dark:text-white ">
                   <div
-                    // data-aos="zoom-up"
-                    className="flex items-center gap-1"
+                    data-aos="zoom-in-down"
+                    className=" items-center gap-1 hidden md:flex"
                   >
                     <PiFileArrowDownLight />
                     {data.invoice}
@@ -135,7 +132,7 @@ const LastOrder = () => {
 
         <div className="flex flex-col gap-2 py-2  ">
           <p
-           data-aos="zoom-in-up"
+            data-aos="zoom-in-up"
             className="text-gray-900 fs-4 fw-semibold dark:text-white"
           >
             Book Bazaar
@@ -178,7 +175,7 @@ const LastOrder = () => {
         </div>
         <div className="flex flex-col gap-2 py-2">
           <p
-           data-aos="zoom-in-up"
+            data-aos="zoom-in-up"
             className="text-gray-900 fs-4 fw-semibold dark:text-white"
           >
             Toy Troop
