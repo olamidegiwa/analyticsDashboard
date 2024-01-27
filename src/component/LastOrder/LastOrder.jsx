@@ -72,10 +72,10 @@ const LastOrder = () => {
               className=" text-gray-400 text-base dark:text-white items-center"
             >
               <th>Name</th>
-              <th className="hidden md:flex">Date</th>
+              <th>Date</th>
               <th>Amount</th>
-              <th className="hidden md:flex">Status</th>
-              <th className="hidden md:flex">Invoice</th>
+              <th>Status</th>
+              <th>Invoice</th>
             </tr>
           </thead>
 
@@ -85,7 +85,7 @@ const LastOrder = () => {
                 <td>
                   <div
                     data-aos="fade-up-right"
-                    className="flex items-center dark:text-white text-gray-600 fw-semibold gap-2 text-base"
+                    className="flex flex-col md:flex-row items-center dark:text-white text-gray-600 fw-semibold gap-2 text-base"
                   >
                     <img src={data.img} alt="" />
                     {data.name}
@@ -93,7 +93,7 @@ const LastOrder = () => {
                 </td>
                 <td
                   data-aos="fade-up-left"
-                  className=" text-gray-500 dark:text-white text-base hidden md:flex"
+                  className=" text-gray-500 dark:text-white text-base"
                 >
                   {data.date}
                 </td>
@@ -103,14 +103,11 @@ const LastOrder = () => {
                 >
                   {data.amount}
                 </td>
-                <td
-                  data-aos="fade-down-left"
-                  className="text-base hidden md:flex"
-                >
+                <td data-aos="fade-down-left" className="text-base">
                   {data.status}
                 </td>
 
-                <td className=" text-gray-600 text-base dark:text-white  hidden md:flex">
+                <td className=" text-gray-600 text-base dark:text-white ">
                   <div data-aos="zoom-in-down" className=" items-center gap-1 ">
                     <PiFileArrowDownLight />
                     {data.invoice}
