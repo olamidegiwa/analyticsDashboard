@@ -118,7 +118,7 @@ const SalesTrend = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 place-items-center">
           <div
             data-aos="zoom-in-up"
-            className="flex flex-col w-[240px] h-[180px]  border-2 p-2 rounded-xl gap-2"
+            className="flex flex-col w-[240px]  border-2 p-2 rounded-xl gap-2"
           >
             <div className="flex items-center justify-between">
               <img src={img4} alt="" />
@@ -140,7 +140,7 @@ const SalesTrend = () => {
           </div>
           <div
             data-aos="zoom-in-up"
-            className="flex flex-col w-[240px] h-[180px]  border-2 p-2 rounded-xl gap-2"
+            className="flex flex-col w-[240px]  border-2 p-2 rounded-xl gap-2"
           >
             <div className="flex items-center justify-between">
               <img src={img5} alt="" />
@@ -162,7 +162,7 @@ const SalesTrend = () => {
           </div>
           <div
             data-aos="zoom-in-up"
-            className="flex flex-col w-[240px] h-[180px] border-2 p-2 rounded-xl gap-2"
+            className="flex flex-col w-[240px] border-2 p-2 rounded-xl gap-2"
           >
             <div className="flex items-center justify-between">
               <img src={img1} alt="" />
@@ -185,7 +185,7 @@ const SalesTrend = () => {
 
           <div
             data-aos="zoom-in-up"
-            className="flex flex-col w-[240px] h-[180px] border-2 p-2 rounded-xl gap-2"
+            className="flex flex-col w-[240px] border-2 p-2 rounded-xl gap-2"
           >
             <div className="flex items-center justify-between">
               <img src={img3} alt="" />

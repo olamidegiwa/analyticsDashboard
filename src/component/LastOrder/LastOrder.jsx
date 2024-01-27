@@ -74,8 +74,8 @@ const LastOrder = () => {
               <th>Name</th>
               <th>Date</th>
               <th>Amount</th>
-              <th>Status</th>
-              <th>Invoice</th>
+              <th className="hidden md:flex">Status</th>
+              <th className="hidden md:flex">Invoice</th>
             </tr>
           </thead>
 
@@ -85,7 +85,7 @@ const LastOrder = () => {
                 <td>
                   <div
                     data-aos="fade-up-right"
-                    className="flex flex-col md:flex-row items-center dark:text-white text-gray-600 fw-semibold gap-2 text-base"
+                    className="flex items-center dark:text-white text-gray-600 fw-semibold gap-2 text-base"
                   >
                     <img src={data.img} alt="" />
                     {data.name}
@@ -103,11 +103,11 @@ const LastOrder = () => {
                 >
                   {data.amount}
                 </td>
-                <td data-aos="fade-down-left" className="text-base">
+                <td data-aos="fade-down-left" className="text-base hidden md:flex">
                   {data.status}
                 </td>
 
-                <td className=" text-gray-600 text-base dark:text-white ">
+                <td className=" text-gray-600 text-base dark:text-white  hidden md:flex">
                   <div data-aos="zoom-in-down" className=" items-center gap-1 ">
                     <PiFileArrowDownLight />
                     {data.invoice}
