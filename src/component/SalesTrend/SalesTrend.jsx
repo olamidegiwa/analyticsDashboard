@@ -73,7 +73,7 @@ const SalesTrend = () => {
               <p
                 data-aos="fade-down"
                 data-aos-duration="1500"
-                className="text-lg text-gray-600 fw-semibold dark:text-green-300 hidden :flex"
+                className="text-lg text-gray-600 fw-semibold dark:text-green-300 hidden md:flex"
               >
                 Short by :
               </p>
