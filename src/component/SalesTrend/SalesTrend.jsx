@@ -63,16 +63,16 @@ const SalesTrend = () => {
         <div className="salestrend gap-y-4">
           <div className="flex items-center justify-between py-2 pb-3 ">
             <h1
-              data-aos="fade-down"
-              data-aos-duration="1500"
+              // data-aos="fade-down"
+              // data-aos-duration="1500"
               className="text-xl text-gray-900 fw-semibold dark:text-pink-500 "
             >
               Sales Trends
             </h1>
             <div className="flex items-center gap-2">
               <p
-                data-aos="fade-down"
-                data-aos-duration="1500"
+                // data-aos="fade-down"
+                // data-aos-duration="1500"
                 className="text-lg text-gray-600 fw-semibold dark:text-green-300 hidden md:flex"
               >
                 Short by :
@@ -80,8 +80,8 @@ const SalesTrend = () => {
               <div className="flex items-center gap-2 group relative cursor-pointer">
                 <div className="items-center rounded-full text-black border-2 px-3 py-1 dark:text-white ">
                   <a
-                    data-aos="fade-down"
-                    data-aos-duration="1500"
+                    // data-aos="fade-down"
+                    // data-aos-duration="1500"
                     href="#"
                     className="text-lg flex items-center gap-2 text-gray-600 fw-semibold dark:text-white"
                   >
@@ -117,7 +117,7 @@ const SalesTrend = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 place-items-center">
           <div
-            data-aos="zoom-in-up"
+            // data-aos="zoom-in-up"
             className="flex flex-col w-[240px] h-[180px]  border-2 p-2 rounded-xl gap-2"
           >
             <div className="flex items-center justify-between">
@@ -139,7 +139,7 @@ const SalesTrend = () => {
             </div>
           </div>
           <div
-            data-aos="zoom-in-up"
+            // data-aos="zoom-in-up"
             className="flex flex-col w-[240px] h-[180px]  border-2 p-2 rounded-xl gap-2"
           >
             <div className="flex items-center justify-between">
@@ -161,7 +161,7 @@ const SalesTrend = () => {
             </div>
           </div>
           <div
-            data-aos="zoom-in-up"
+            // data-aos="zoom-in-up"
             className="flex flex-col w-[240px] h-[180px] border-2 p-2 rounded-xl gap-2"
           >
             <div className="flex items-center justify-between">
@@ -184,7 +184,7 @@ const SalesTrend = () => {
           </div>
 
           <div
-            data-aos="zoom-in-up"
+            // data-aos="zoom-in-up"
             className="flex flex-col w-[240px] h-[180px] border-2 p-2 rounded-xl gap-2"
           >
             <div className="flex items-center justify-between">
