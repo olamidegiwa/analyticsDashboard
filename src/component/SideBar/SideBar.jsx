@@ -13,11 +13,9 @@ import DarkMode from "../DarkMode";
 const SideBar = () => {
   return (
     <div className="sidebar d-flex flex-xl-column items-center justify-content-between justify-content-xl-start gap-xl-4 px-2 py-3 mx-md-2  bg-gray-100 rounded-xl dark:bg-black dark:text-white">
-      <img
-       data-aos="fade-down-right"
-        src={icon1} alt="" className="w-10" />
+      <img data-aos="fade-down-right" src={icon1} alt="" className="w-10" />
       <div
-       data-aos="zoom-out-right"
+        data-aos="zoom-out-right"
         className=" flex-xl-column hidden lg:flex items-center"
       >
         <img src={icon2} alt="icon" />
@@ -33,7 +31,7 @@ const SideBar = () => {
 
       <div
         data-aos="fade-up"
-        className=" flex-xl-column  align-items-center hidden xl:flex"
+        className=" flex-xl-column  align-items-center hidden lg:flex"
       >
         <img src={icon7} alt="icon" />
         <img src={icon8} alt="icon" />

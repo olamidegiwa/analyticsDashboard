@@ -59,9 +59,9 @@ const SalesTrend = () => {
 
   return (
     <div className="container py-3">
-      <div className="flex flex-col lg:flex-row justify-between py-3 gap-y-4 place items-center ">
-        <div className="salestrend gap-y-4">
-          <div className="flex items-center justify-between py-2 pb-3 ">
+      <div className="flex flex-col xl:flex-row justify-between py-3 gap-3 gap-y-4 place items-center ">
+        <div className="salestrend flex flex-col justify-end">
+          <div className="flex items-center justify-between">
             <h1
               data-aos="fade-down"
               data-aos-duration="1500"
@@ -115,10 +115,10 @@ const SalesTrend = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 place-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 place-items-center">
           <div
             data-aos="zoom-in-up"
-            className="flex flex-col w-[240px]  border-2 p-2 rounded-xl gap-2"
+            className="flex flex-col   border-2 p-2 rounded-xl gap-2"
           >
             <div className="flex items-center justify-between">
               <img src={img4} alt="" />
@@ -128,8 +128,8 @@ const SalesTrend = () => {
               Total Order
             </p>
             <p className=" text-2xl fw-bold pb-2 dark:text-white">350</p>
-            <div className="flex justify-between items-center">
-              <div className="flex  gap-1  rounded-full px-2 py-1 bg-green-200 dark:bg-white dark:text-green-600">
+            <div className="flex justify-between items-center gap-2">
+              <div className="flex  gap-1 items-center rounded-full p-1 bg-green-200 dark:bg-white dark:text-green-600">
                 <img src={img10} alt="" />
                 <p className="text-green text-xs fw-semibold">23.5%</p>
               </div>
@@ -140,7 +140,7 @@ const SalesTrend = () => {
           </div>
           <div
             data-aos="zoom-in-up"
-            className="flex flex-col w-[240px]  border-2 p-2 rounded-xl gap-2"
+            className="flex flex-col   border-2 p-2 rounded-xl gap-2"
           >
             <div className="flex items-center justify-between">
               <img src={img5} alt="" />
@@ -150,8 +150,8 @@ const SalesTrend = () => {
               Total Refund
             </p>
             <p className=" dark:text-white text-2xl fw-bold pb-2">270</p>
-            <div className="flex justify-between items-center">
-              <div className="flex  gap-1  rounded-full px-2 py-1 bg-pink-200 dark:bg-white dark:text-pink-700">
+            <div className="flex justify-between items-center gap-2">
+              <div className="flex  gap-1 items-center  rounded-full p-1 bg-pink-200 dark:bg-white dark:text-pink-700">
                 <img src={img9} alt="" />
                 <p className="text-pink text-xs fw-semibold">23.5%</p>
               </div>
@@ -162,7 +162,7 @@ const SalesTrend = () => {
           </div>
           <div
             data-aos="zoom-in-up"
-            className="flex flex-col w-[240px] border-2 p-2 rounded-xl gap-2"
+            className="flex flex-col  border-2 p-2 rounded-xl gap-2"
           >
             <div className="flex items-center justify-between">
               <img src={img1} alt="" />
@@ -172,8 +172,8 @@ const SalesTrend = () => {
               Average Sales
             </p>
             <p className="dark:text-white text-2xl fw-bold pb-2">1567</p>
-            <div className="flex justify-between items-center">
-              <div className="flex  gap-1  rounded-full px-2 py-1 bg-pink-200 dark:bg-white dark:text-pink-700">
+            <div className="flex justify-between items-center gap-2">
+              <div className="flex  gap-1 items-center  rounded-full p-1 bg-pink-200 dark:bg-white dark:text-pink-700">
                 <img src={img9} alt="" />
                 <p className="text-pink text-xs fw-semibold">23.5%</p>
               </div>
@@ -185,7 +185,7 @@ const SalesTrend = () => {
 
           <div
             data-aos="zoom-in-up"
-            className="flex flex-col w-[240px] border-2 p-2 rounded-xl gap-2"
+            className="flex flex-col border-2 p-2 rounded-xl gap-2"
           >
             <div className="flex items-center justify-between">
               <img src={img3} alt="" />
@@ -195,8 +195,8 @@ const SalesTrend = () => {
               Total Income
             </p>
             <p className="dark:text-white text-2xl fw-bold pb-2">$350.000</p>
-            <div className="flex justify-between items-center">
-              <div className="flex  gap-1  rounded-full px-2 py-1 bg-green-200 dark:bg-white dark:text-green-700 ">
+            <div className="flex justify-between items-center gap-2">
+              <div className="flex  gap-1  rounded-full p-1 bg-green-200 dark:bg-white dark:text-green-700 ">
                 <img src={img10} alt="" />
                 <p className="text-green text-xs fw-semibold">23.5%</p>
               </div>

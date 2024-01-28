@@ -57,7 +57,7 @@ const OrderDetails = [
 const LastOrder = () => {
   return (
     <div className="container flex flex-col lg:flex-row gap-3 place-items-center pb-8">
-      <div className=" border-2 flex flex-col p-3 lastorder rounded-xl">
+      <div className=" border-2 flex flex-col p-3 lastorder  rounded-xl">
         <div data-aos="zoom-out-right" className="flex justify-between mb-2">
           <p className="fs-4 fw-semibold text-gray-900 dark:text-pink-500">
             Last Orders
@@ -74,8 +74,8 @@ const LastOrder = () => {
               <th>Name</th>
               <th>Date</th>
               <th>Amount</th>
-              <th>Status</th>
-              <th>Invoice</th>
+              <th className="">Status</th>
+              <th className="">Invoice</th>
             </tr>
           </thead>
 
@@ -103,13 +103,19 @@ const LastOrder = () => {
                 >
                   {data.amount}
                 </td>
-                <td data-aos="fade-down-left" className="text-base">
+                <td
+                  data-aos="fade-down-left"
+                  className="text-base"
+                >
                   {data.status}
                 </td>
 
                 <td className=" text-gray-600 text-base dark:text-white ">
-                  <div data-aos="zoom-in-down" className=" items-center gap-1 ">
-                    <PiFileArrowDownLight />
+                  <div
+                    data-aos="zoom-in-down"
+                    className="items-center gap-1 flex hiden:md"
+                  >
+                    <PiFileArrowDownLight className="" />
                     {data.invoice}
                   </div>
                 </td>
