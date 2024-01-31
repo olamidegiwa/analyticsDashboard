@@ -12,7 +12,7 @@ import DarkMode from "../DarkMode";
 
 const SideBar = () => {
   return (
-    <div className="sidebar d-flex flex-xl-column items-center justify-content-between justify-content-xl-start gap-xl-4 px-2 py-3 mx-md-2  bg-gray-100 rounded-xl dark:bg-black dark:text-white">
+    <div className="sidebar position-sticky top-0 d-flex flex-xl-column items-center justify-content-between justify-content-xl-start gap-xl-4  px-2 py-3 mx-md-2  bg-gray-100 rounded-xl dark:bg-black dark:text-white">
       <img data-aos="fade-down-right" src={icon1} alt="" className="w-10" />
       <div
         data-aos="zoom-out-right"

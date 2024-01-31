@@ -59,8 +59,8 @@ const SalesTrend = () => {
 
   return (
     <div className="container py-3">
-      <div className="flex flex-col xl:flex-row justify-between py-3 gap-3 gap-y-4 place items-center ">
-        <div className="salestrend flex flex-col justify-end">
+      <div className="flex flex-col xl:flex-row justify-between py-3 gap-3 gap-y-4 place-items-center ">
+        <div className="salestrend flex flex-col">
           <div className="flex items-center justify-between">
             <h1
               data-aos="fade-down"
@@ -73,9 +73,9 @@ const SalesTrend = () => {
               <p
                 data-aos="fade-down"
                 data-aos-duration="1500"
-                className="text-lg text-gray-600 fw-semibold dark:text-green-300 hidden md:flex"
+                className="text-lg text-gray-600 fw-semibold dark:text-green-300"
               >
-                Short by :
+                Short by:
               </p>
               <div className="flex items-center gap-2 group relative cursor-pointer">
                 <div className="items-center rounded-full text-black border-2 px-3 py-1 dark:text-white ">
@@ -205,6 +205,7 @@ const SalesTrend = () => {
               </p>
             </div>
           </div>
+          
         </div>
       </div>
     </div>

@@ -46,7 +46,7 @@ const Search = () => {
           </div>
           <div
             data-aos="fade-up"
-            className="flex items-center rounded-full w-[195px] gap-2 border px-1 py-1 "
+            className="flex items-center rounded-full gap-1 border-2 p-1 "
           >
             <img src={img1} alt="" className="h-10 w-10 rounded-full" />
             <div className="flex flex-col items-center">
