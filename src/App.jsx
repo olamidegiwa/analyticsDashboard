@@ -4,6 +4,8 @@ import "./App.css";
 import RootLayout from "./layouts/RootLayout";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import "react-datepicker/dist/react-datepicker.css";
+
 function App() {
   useEffect(() => {
     AOS.init({

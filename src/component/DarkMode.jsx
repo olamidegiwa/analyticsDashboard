@@ -1,6 +1,6 @@
 import React from "react";
-import img1 from "../assets/image/moon 1.png";
 import { IoMdSunny } from "react-icons/io";
+import { FiMoon } from "react-icons/fi";
 
 const DarkMode = () => {
   const [theme, setTheme] = React.useState(
@@ -20,17 +20,15 @@ const DarkMode = () => {
   return (
     <div
       data-aos="fade-down-left"
-      className=" flex flex-xl-column gap-3 py-2 px-2 bg-white rounded-full items-center"
+      className=" flex flex-xl-column gap-3 py-2 px-2 dark:bg-white  rounded-full items-center border-4 dark:border-white"
     >
       <IoMdSunny
         onClick={() => setTheme(theme === "light" ? "light" : "light")}
-        className="fs-2  rounded-full bg-success px-1 text-white bg-green-300 cursor-pointer transition-all duration-300"
+        className="fs-1  rounded-full bg- px-1 text-gray-400 bg-gree-300 dark:text-black cursor-pointer transition-all duration-300"
       />
-      <img
+      <FiMoon
         onClick={() => setTheme(theme === "light" ? "dark" : "dark")}
-        src={img1}
-        alt="icon"
-        className="fs-1 cursor-pointer transition-all duration-300"
+        className="fs-1 cursor-pointer transition-all duration-300 fs-2 text-gray-400 dark:text-black"
       />
     </div>
   );
