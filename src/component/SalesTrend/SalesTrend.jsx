@@ -75,7 +75,7 @@ const SalesTrend = () => {
                 data-aos-duration="1500"
                 className="text-lg text-gray-600 fw-semibold dark:text-green-300"
               >
-                Short by:
+                Sort by:
               </p>
               <div className="flex items-center gap-2 group relative cursor-pointer">
                 <div className="items-center rounded-full text-black border-2 px-3 py-1 dark:text-white ">

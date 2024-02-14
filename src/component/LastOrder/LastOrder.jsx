@@ -5,6 +5,7 @@ import img3 from "../../assets/image/Frame 1000003208 (3).png";
 import img4 from "../../assets/image/Frame 1000003208 (4).png";
 import img5 from "../../assets/image/Frame 1000003208.png";
 import { PiFileArrowDownLight } from "react-icons/pi";
+import DetailsModal from "../DetailsModal";
 
 const OrderDetails = [
   {
@@ -84,10 +85,11 @@ const OrderDetails = [
 const LastOrder = () => {
   const [showAll, setShowAll] = useState(false);
   const [seeMore, setSeeMore] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   return (
-    <div className="container flex flex-col lg:flex-row gap-3 pb-8 xl:items-end">
-      <div className=" border-2 flex flex-col  p-3 lastorder rounded-xl overflow-x-scroll w-full ">
+    <div className="container flex flex-col lg:flex-row gap-3 pb-16 lg:items-end items-center lg:pt-5">
+      <div className=" border-2 flex flex-col  p-3 lastorder rounded-xl w-full  ">
         <div className="flex justify-between mb-2">
           <p
             data-aos="zoom-out-right"
@@ -113,13 +115,13 @@ const LastOrder = () => {
                 <th className="font-medium text-base whitespace-nowrap pb-3">
                   Name
                 </th>
-                <th className="font-medium text-base whitespace-nowrap pb-3">
+                <th className="font-medium text-base whitespace-nowrap pb-3 px-5">
                   Date
                 </th>
-                <th className="font-medium text-base whitespace-nowrap pb-3">
+                <th className="font-medium text-base whitespace-nowrap pb-3 px-4">
                   Amount
                 </th>
-                <th className="font-medium text-base whitespace-nowrap pb-3">
+                <th className="font-medium text-base whitespace-nowrap pb-3 px-4">
                   Status
                 </th>
                 <th className="font-medium text-base whitespace-nowrap pb-3">
@@ -134,11 +136,14 @@ const LastOrder = () => {
                   key={data.id}
                   className="border-b-[3px] border-gray-300 hover:bg-white dark:hover:bg-yellow-600 py-4"
                 >
+                  {showModal ? (
+                    <DetailsModal data={data} setShowModal={setShowModal} />
+                  ) : null}
                   <td
                     data-aos="fade-up-right"
                     className=" text-gray-600 dark:text-white "
                   >
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-3 ">
                       <img src={data.img} alt="" />
                       <h2 className="text-base whitespace-nowrap">
                         {data.name}
@@ -147,19 +152,19 @@ const LastOrder = () => {
                   </td>
                   <td
                     data-aos="fade-up-left"
-                    className=" text-gray-500 dark:text-white text-base whitespace-nowrap"
+                    className=" text-gray-500 dark:text-white text-base whitespace-nowrap px-5"
                   >
                     {data.date}
                   </td>
                   <td
                     data-aos="fade-down-right"
-                    className=" text-gray-800 fw-semibold text-base dark:text-white whitespace-nowrap"
+                    className=" text-gray-800 fw-semibold text-base dark:text-white whitespace-nowrap px-4"
                   >
                     {data.amount}
                   </td>
                   <td
                     data-aos="fade-down-left"
-                    className={`text-base ${
+                    className={`text-base px-4 ${
                       data.status === "Paid" ? "text-green-300" : "text-red-600"
                     } `}
                   >
@@ -167,8 +172,12 @@ const LastOrder = () => {
                   </td>
 
                   <td
+                    // onClick={() => {
+                    //   console.log(data.name);
+                    //   setShowModal(true);
+                    // }}
                     data-aos="zoom-in-down"
-                    className=" text-gray-600 text-base dark:text-white whitespace-nowrap"
+                    className=" text-gray-600 text-base dark:text-white whitespace-nowrap cursor-pointer"
                   >
                     <div className="flex items-center gap-1">
                       <PiFileArrowDownLight className="" />
@@ -187,6 +196,10 @@ const LastOrder = () => {
                     className="border-b-[3px] border-gray-300 hover:bg-white dark:hover:bg-yellow-600 py-4"
                   >
                     <td
+                    //  onClick={() => {
+                    //   console.log(data.name);
+                    //   setShowModal(true);
+                    // }}
                       data-aos="fade-up-right"
                       className=" text-gray-600 dark:text-white"
                     >
@@ -199,19 +212,19 @@ const LastOrder = () => {
                     </td>
                     <td
                       data-aos="fade-up-left"
-                      className=" text-gray-500 dark:text-white text-base whitespace-nowrap"
+                      className=" text-gray-500 dark:text-white text-base whitespace-nowrap px-5"
                     >
                       {data.date}
                     </td>
                     <td
                       data-aos="fade-down-right"
-                      className=" text-gray-800 fw-semibold text-base dark:text-white whitespace-nowrap"
+                      className=" text-gray-800 fw-semibold text-base dark:text-white whitespace-nowrap px-4"
                     >
                       {data.amount}
                     </td>
                     <td
                       data-aos="fade-down-left"
-                      className={`text-base ${
+                      className={`text-base px-4 ${
                         data.status === "Paid"
                           ? "text-green-300"
                           : "text-red-600"

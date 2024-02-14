@@ -1,19 +1,12 @@
 #root {
   background-color: #fafafa;
   min-height: 100vh;
-  /* overflow-x: hidden; */
   width: 100%;
 }
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-
-table {
-  width: 100%;
-  text-align: start;
-  align-items: center;
 }
 
 td {
@@ -25,9 +18,6 @@ td {
 .Troop {
   width: 25%;
 }
-/* .lastorder {
-  width: 100%;
-} */
 .topplatform {
   width: 100%;
   max-width: 500px;
@@ -39,7 +29,6 @@ td {
 
 .orders {
   width: 100%;
-  /* background-color: #fff; */
 }
 .barchat {
   width: 700px;
