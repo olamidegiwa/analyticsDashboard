@@ -16,6 +16,7 @@ const OrderDetails = [
     amount: "$80,000",
     status: "Paid",
     invoice: "View",
+    details: "Mercus Bergson <br/> Nov15,2023 <br/> $80,000 <br/> Paid",
   },
   {
     id: 2,
@@ -86,9 +87,10 @@ const LastOrder = () => {
   const [showAll, setShowAll] = useState(false);
   const [seeMore, setSeeMore] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [openRow, setOpenRow] = useState(null);
 
   return (
-    <div className="container flex flex-col lg:flex-row gap-3 pb-16 lg:items-end items-center lg:pt-5">
+    <div className="container flex flex-col lg:flex-ro gap-3 pb-16 lg:items-end items-center lg:pt-5">
       <div className=" border-2 flex flex-col  p-3 lastorder rounded-xl w-full  ">
         <div className="flex justify-between mb-2">
           <p
@@ -136,9 +138,9 @@ const LastOrder = () => {
                   key={data.id}
                   className="border-b-[3px] border-gray-300 hover:bg-white dark:hover:bg-yellow-600 py-4"
                 >
-                  {showModal ? (
+                  {/* {showModal ? (
                     <DetailsModal data={data} setShowModal={setShowModal} />
-                  ) : null}
+                  ) : null} */}
                   <td
                     data-aos="fade-up-right"
                     className=" text-gray-600 dark:text-white "
@@ -172,20 +174,53 @@ const LastOrder = () => {
                   </td>
 
                   <td
-                    // onClick={() => {
-                    //   console.log(data.name);
-                    //   setShowModal(true);
-                    // }}
                     data-aos="zoom-in-down"
-                    className=" text-gray-600 text-base dark:text-white whitespace-nowrap cursor-pointer"
+                    className="relative text-gray-600 text-base dark:text-white whitespace-nowrap cursor-pointer"
                   >
-                    <div className="flex items-center gap-1">
+                    <div className="flex items-center gap-1 ">
                       <PiFileArrowDownLight className="" />
-                      <h2 className="text-base whitespace-nowrap m-0">
+                      <button
+                        onClick={() =>
+                          setOpenRow((prev) =>
+                            prev === data.id ? null : data.id
+                          )
+                        }
+                        className="text-base whitespace-nowrap m-0"
+                      >
                         {data.invoice}
-                      </h2>
+                      </button>
                     </div>
                   </td>
+                  {openRow === data.id && (
+                    <div className="fixed inset-0 flex items-center justify-center bg-black/50 backdrop-blur-sm z-50">
+                      <div className="p-3 bg-white rounded-lg flex flex-col items-center text-center shadow-lg w-40">
+                        <p className="text-black font-semibold text-base">
+                          {data.name}
+                        </p>
+                        <p className="text-black font-semibold text-base">
+                          {data.date}
+                        </p>
+                        <p className="text-black font-semibold text-base">
+                          {data.amount}
+                        </p>
+                        <p
+                          className={`text-base px-4 ${
+                            data.status === "Paid"
+                              ? "text-green-300"
+                              : "text-red-600"
+                          } `}
+                        >
+                          {data.status}
+                        </p>
+                        <button
+                          onClick={() => setOpenRow(null)}
+                          className="mt-3 text-white bg-red-600 hover:bg-green-500 px-4 py-2 rounded-lg font-semibold"
+                        >
+                          CLOSE
+                        </button>
+                      </div>
+                    </div>
+                  )}
                 </tr>
               ))}
 
@@ -196,10 +231,6 @@ const LastOrder = () => {
                     className="border-b-[3px] border-gray-300 hover:bg-white dark:hover:bg-yellow-600 py-4"
                   >
                     <td
-                    //  onClick={() => {
-                    //   console.log(data.name);
-                    //   setShowModal(true);
-                    // }}
                       data-aos="fade-up-right"
                       className=" text-gray-600 dark:text-white"
                     >
@@ -233,7 +264,7 @@ const LastOrder = () => {
                       {data.status}
                     </td>
 
-                    <td
+                    {/* <td
                       data-aos="zoom-in-down"
                       className=" text-gray-600 text-base dark:text-white whitespace-nowrap"
                     >
@@ -243,7 +274,55 @@ const LastOrder = () => {
                           {data.invoice}
                         </h2>
                       </div>
+                    </td> */}
+                    <td
+                      data-aos="zoom-in-down"
+                      className="relative text-gray-600 text-base dark:text-white whitespace-nowrap cursor-pointer"
+                    >
+                      <div className="flex items-center gap-1 ">
+                        <PiFileArrowDownLight className="" />
+                        <button
+                          onClick={() =>
+                            setOpenRow((prev) =>
+                              prev === data.id ? null : data.id
+                            )
+                          }
+                          className="text-base whitespace-nowrap m-0"
+                        >
+                          {data.invoice}
+                        </button>
+                      </div>
                     </td>
+                    {openRow === data.id && (
+                      <div className="fixed inset-0 flex items-center justify-center bg-black/50 backdrop-blur-sm z-50">
+                        <div className="p-3 bg-white rounded-lg flex flex-col items-center text-center shadow-lg w-40">
+                          <p className="text-black font-semibold text-base">
+                            {data.name}
+                          </p>
+                          <p className="text-black font-semibold text-base">
+                            {data.date}
+                          </p>
+                          <p className="text-black font-semibold text-base">
+                            {data.amount}
+                          </p>
+                          <p
+                            className={`text-base px-4 ${
+                              data.status === "Paid"
+                                ? "text-green-300"
+                                : "text-red-600"
+                            } `}
+                          >
+                            {data.status}
+                          </p>
+                          <button
+                            onClick={() => setOpenRow(null)}
+                            className="mt-3 text-white bg-red-600 hover:bg-green-500 px-4 py-2 rounded-lg font-semibold"
+                          >
+                            CLOSE
+                          </button>
+                        </div>
+                      </div>
+                    )}
                   </tr>
                 ))}
             </tbody>
