@@ -44,6 +44,7 @@ const DropdownLinks = [
 ];
 
 const SalesTrend = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const [userData, setUserData] = useState({
     labels: UserData.map((data) => data.month),
     datasets: [
@@ -63,49 +64,57 @@ const SalesTrend = () => {
         <div className="salestrend flex flex-col">
           <div className="flex items-center justify-between">
             <h1
-              data-aos="fade-down"
-              data-aos-duration="1500"
+              // data-aos="fade-down"
+              // data-aos-duration="1500"
               className="text-xl text-gray-900 fw-semibold dark:text-pink-500 "
             >
               Sales Trends
             </h1>
             <div className="flex items-center gap-2">
               <p
-                data-aos="fade-down"
+                // data-aos="fade-down"
                 data-aos-duration="1500"
                 className="text-lg text-gray-600 fw-semibold dark:text-green-300"
               >
                 Sort by:
               </p>
               <div className="flex items-center gap-2 group relative cursor-pointer">
-                <div className="items-center rounded-full text-black border-2 px-3 py-1 dark:text-white ">
-                  <a
-                    data-aos="fade-down"
-                    data-aos-duration="1500"
-                    href="#"
-                    className="text-lg flex items-center gap-2 text-gray-600 fw-semibold dark:text-white"
+              
+                <div onClick={() => setIsOpen(true)} className="flex gap-2 items-center px-3 py-1 border-2 rounded-lg ">
+                  <p> Weekly</p>
+                  <span>
+                    <IoIosArrowDown className="transition-all group-hover:rotate-180 text-xl" />
+                  </span>
+                </div>
+                {isOpen && (
+                  <ul
+                    onClick={() => setIsOpen(false)}
+                    className="border-2 rounded-lg w-28 bg-white dark:text-black dark:bg-white fixed top-48 z-10"
                   >
-                    Weekly
-                    <span>
-                      <IoIosArrowDown className="transition-all group-hover:rotate-180 text-xl" />
-                    </span>
-                  </a>
-                </div>
-
-                <div className="absolute z-[9999] hidden group-hover:block w-[130px] rounded-md p-2 shadow-md top-[45px] bg-white dark:text-black dark:bg-white">
-                  <ul>
-                    {DropdownLinks.map((data) => (
-                      <li key={data.id}>
-                        <a
-                          href="#"
-                          className="inline-block w-full rounded-md px-2 py-1   text-xl text-gray-600 fw-semibold  hover:bg-gray-300 "
-                        >
-                          {data.name}
-                        </a>
-                      </li>
-                    ))}
+                    <li className="hover:bg-gray-300 text-gray-600 p-2">
+                      Sunday
+                    </li>
+                    <li className="hover:bg-gray-300 text-gray-600 p-2">
+                      {" "}
+                      Monday
+                    </li>
+                    <li className="hover:bg-gray-300 text-gray-600 p-2">
+                      Tuesday
+                    </li>
+                    <li className="hover:bg-gray-300 text-gray-600 p-2">
+                      Wednesday
+                    </li>
+                    <li className="hover:bg-gray-300 text-gray-600  p-2">
+                      Thursday
+                    </li>
+                    <li className="hover:bg-gray-300 text-gray-600 p-2">
+                      Friday
+                    </li>
+                    <li className="hover:bg-gray-300 text-gray-600 p-2">
+                      Saturday
+                    </li>
                   </ul>
-                </div>
+                )}
               </div>
             </div>
           </div>
@@ -117,7 +126,7 @@ const SalesTrend = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 place-items-center w-100">
           <div
-            data-aos="zoom-in-up"
+            // data-aos="zoom-in-up"
             className="flex flex-col orders border-2 py-4 px-3 rounded-xl gap-2 dark:bg-black"
           >
             <div className="flex items-center justify-between">
@@ -139,7 +148,7 @@ const SalesTrend = () => {
             </div>
           </div>
           <div
-            data-aos="zoom-in-up"
+            // data-aos="zoom-in-up"
             className="flex flex-col orders  border-2 py-4 px-3 rounded-xl gap-2"
           >
             <div className="flex items-center justify-between">
@@ -162,7 +171,7 @@ const SalesTrend = () => {
           </div>
 
           <div
-            data-aos="zoom-in-up"
+            // data-aos="zoom-in-up"
             className="flex flex-col orders border-2 py-4 px-3 rounded-xl gap-2"
           >
             <div className="flex items-center justify-between">
@@ -185,7 +194,7 @@ const SalesTrend = () => {
           </div>
 
           <div
-            data-aos="zoom-in-up"
+            // data-aos="zoom-in-up"
             className="flex flex-col orders border-2 px-3 py-4 rounded-xl gap-2"
           >
             <div className="flex items-center justify-between">
